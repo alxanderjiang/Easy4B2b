@@ -43,7 +43,7 @@ Some problems may happen when install or use numba because of laking the library
 pip install scipy
 ```
 
-## Post Mode: Record and Re-solve the Real-Time Collected PPP-B2b Log Files form UM982
+## Post Mode: Replay and Re-solve the Real-Time Collected PPP-B2b Log Files form UM982
 
 
 
