@@ -45,6 +45,12 @@ pip install scipy
 
 ## Post Mode: Replay and Re-solve the Real-Time Collected PPP-B2b Log Files form UM982
 
+For post-positioning users (especially users for research purpose), Easy4B2b's post mode supports playback and post-processing of real-time streaming log files collected from GNSS receiver (Unicore UM982) or **Easy4B2b real-time stream simulator**.  Post mode depends on configuration file (.yaml) startup. Set the stream file path as:
+```yaml
+obs_stream: "data/Real_Time/pimo0790.24o.b2b.log"     #Take IGS station (PIMO) + PPP-B2b simulated stream files for example
+```
+
+
 
 
 ## Real-Time Mode: Real-Time PPP-B2b by the datastream transferred by UART
