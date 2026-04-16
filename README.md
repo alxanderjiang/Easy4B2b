@@ -49,10 +49,17 @@ For post-positioning users (especially users for research purpose), Easy4B2b's p
 ```yaml
 obs_stream: "data/Real_Time/pimo0790.24o.b2b.log"     #Take IGS station (PIMO) + PPP-B2b simulated stream files for example
 ```
+**Do not change the set of Multi-GNSS Code&Frequency Choices: freqs** in current version as BDS-3 B2b has not broadcasted GAL orbits/clocks. That means that Easy4B2b fixedly implements GPS+BDS combined PPP. Thus, GNSS system selection will only be possible by satellite exclusion, for example, setting sat_out as follows for single BDS solution:
+
+```yaml
+sat_out: ['G01','G02','G03','G04','G05','G06','G07','G08',
+   'G09','G10','G11','G12','G13','G14','G15','G16','G17','G18','G19',
+   'G20','G21','G22','G23','G24','G25','G26','G27','G28','G29','G30',
+   'G31','G32']      # Outlier all the GPS satellites
+```
 
 
 
-
-## Real-Time Mode: Real-Time PPP-B2b by the datastream transferred by UART
+## Real-Time Mode: Real-Time PPP-B2b by the datastream received from UART COM Port
 
 
