@@ -2,5 +2,5 @@
 
 [[中]](./README-zh.md) &ensp; [[EN]](./README.md)
 
-An easily ported <b Real-Time /b> PPP-B2b Toolbox coded in Python.
+An easily ported <b Real-Time /> PPP-B2b Toolbox coded in Python.
 
