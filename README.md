@@ -69,8 +69,9 @@ MEO_only: 0     # 1: MEO only  0: MEO+IGSO+GEO
 ```
 
 The post mode of Easy4B2b supports PPP-B2b-RTK solution. Its related configuration setting rules are consistent with Easy4PTK. The other configuration setting rules related to PPP solution are consistent with Easy4PPP. The provided example solution of Easy4B2b is just post mode, run all the blocks of "PPP_B2b_RTK_Service.ipynb" or src/ppp_b2b_yaml.py, users can get static solution of simulated realtime log file of PIMO station. The console will show the soloving epoch time and positioning variances in north (N), east (E) and vertical (U) directions during the solving stage as follows:
+
 ```base
-[2024-05-11 01:13:30] 10 0.051
+[2024-05-11 01:13:30] 10 0.051010 0.120021 0.067890
 ```
 
 
