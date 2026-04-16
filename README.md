@@ -57,7 +57,21 @@ sat_out: ['G01','G02','G03','G04','G05','G06','G07','G08',
    'G20','G21','G22','G23','G24','G25','G26','G27','G28','G29','G30',
    'G31','G32']      # Outlier all the GPS satellites
 ```
+Unlike other toolboxs of Easy4PNT such as Easy4PPP or Easy4PTK, Easy4B2b must set the solution times rather than epochs due to the design of real-time solving structure:
+```yaml
+obs_start_time: [2024,3,19,0,0,0.0]                          #解算初始时刻(the beginning time of solution, empty dic for total number)
+obs_end_time:   [2024,3,20,0,0,0.0]                          #解算结束时刻(the ending time of solution, empty dic for total number)
+```
+As long as time range for solving is set, Easy4B2b will not process messages outside the time range in stream file. In addition to exclusion through satellite PRN codes, Easy4B2b also supports direct exclusion of IGSO/GEO satellites as follows:
 
+```yaml
+MEO_only: 0     # 1: MEO only  0: MEO+IGSO+GEO
+```
+
+The post mode of Easy4B2b supports PPP-B2b-RTK solution. Its related configuration setting rules are consistent with Easy4PTK. The other configuration setting rules related to PPP solution are consistent with Easy4PPP. The provided example solution of Easy4B2b is just post mode, run all the blocks of "PPP_B2b_RTK_Service.ipynb" or src/ppp_b2b_yaml.py, users can get static solution of simulated realtime log file of PIMO station. The console will show the soloving epoch time and positioning variances in north (N), east (E) and vertical (U) directions during the solving stage as follows:
+```base
+[2024-05-11 01:13:30] 
+```
 
 
 ## Real-Time Mode: Real-Time PPP-B2b by the datastream received from UART COM Port
