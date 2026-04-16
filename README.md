@@ -15,17 +15,17 @@ This is a part of open-source toolbox Easy4PNT. Other toolboxs of Easy4PNT is li
 ## Downloading and preperations
 1. Download the **zip pakeage directly** or using git clone by running the following commend:
 ```bash
-git clone https://github.com/alxanderjiang/Easy4PTK.git
+git clone https://github.com/alxanderjiang/Easy4B2b.git
 ```
 2. Download the "data.zip" and "nav_result.zip" files from Google Drive ([[https://drive.google.com/drive/folders/1jiUGXHMB1W6iSe09Hc1iVTmT-9wfPqOy?usp=drive_link]](https://drive.google.com/drive/folders/1jiUGXHMB1W6iSe09Hc1iVTmT-9wfPqOy?usp=drive_link))) or LanZou Drive ([[https://wwbwg.lanzouv.com/b01bjcqghe]](https://wwbwg.lanzouv.com/b01bjcqghe)) . 
-3. Unzip the sample data folders: data.zip and nav_result.zip to the same path of Easy4PTK. If linux but no GUI, please run the following commends:
+3. Unzip the sample data folders: data.zip and nav_result.zip to the same path of Easy4B2b. If linux but no GUI, please run the following commends:
 
 ```bash
-cd Easy4PTK
+cd Easy4B2b
 unzip data.zip
 unzip nav_result
 ```
-4. Ensure that the numpy, tqdm, ipykernel, numba and Pyyaml is available in your Python environment. If not, please run the following commends to install:
+4. Ensure that the numpy, tqdm, ipykernel, numba, Pyyaml and pyserial are available in your Python environment. If not, please run the following commends to install:
 
 ```bash
 pip install numpy
@@ -33,9 +33,10 @@ pip install tqdm
 pip install ipykernel
 pip install numba
 pip install Pyyaml
+pip install pyserial
 ```
 
-  numpy and tqdm is used in the core codes while ipykernel is necessary to run Jupyter Notebook tutorials. numba is used to accelerate the computation (this can be ignored by change all the "numba_inv" function to simple "inv()" function). Unlike the Easy4PPP, Easy4PTK does not support running from a __main__ function with variables definition, only Yaml Configuration file is supported.
+  numpy and tqdm is used in the core codes while ipykernel is necessary to run Jupyter Notebook tutorials. numba is used to accelerate the computation (this can be ignored by change all the "numba_inv" function to simple "inv()" function). Easy4B2b does not support running from a __main__ function with variables definition for post simulated solving, only Yaml Configuration file is supported. But the real-time solution script is runned by __main__ function with variables. Details will be shown in follow sections.
 Some problems may happen when install or use numba because of laking the library scipy, please install it by running the following commends:
 
 ```bash
