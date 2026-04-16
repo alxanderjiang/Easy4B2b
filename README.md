@@ -73,7 +73,10 @@ The post mode of Easy4B2b supports PPP-B2b-RTK solution. Its related configurati
 ```base
 [2024-05-11 01:13:30] 10 0.051010 0.120021 0.067890
 ```
-
+The above example shows that Easy4B2b is now solving the obervation of GPST on May 11, 2024 at 01:13:30. The number of effective satellites in current epoch is 10, and the position variances in the NEU directions are 0.051010m, 0.120021m and 0.067890m respectively. Easy4B2b also supports the common PPP solution by IGS precise products (orbits/clocks/atx), which can be used as the **ground truth references** of real-time collected observations in kinematic scenarios. PPP-B2b, PPP-B2b-RTK (base mode), PPP-B2b-RTK (rove mode) and PPP-IGS are set by the "sta_mode" in configuration file as:
+```yaml
+sta_mode: None                     #支持None(PPP-B2b)/Base(基准站, PPP-B2b-RTK)/Rove(流动站, PPP-B2b-RTK)/IGSR(事后IGS精密产品, IGS precise products)
+```
 
 ## Real-Time Mode: Real-Time PPP-B2b by the datastream received from UART COM Port
 
