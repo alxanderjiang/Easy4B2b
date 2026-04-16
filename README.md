@@ -12,4 +12,33 @@ This is a part of open-source toolbox Easy4PNT. Other toolboxs of Easy4PNT is li
 3. After unzipping the "data" folder, run all the blocks of "PPP_B2b_RTK_Service.ipynb" or src/ppp_b2b_yaml.py, you all get an Easy4PNT solution log file in form of ".npy". The running script is following the configuration of Easy4B2b.yaml: using the B2b realtime log file "data/Real_Time/pimo0790.24o.b2b.log" to conduct static PPP-B2b results without any other constraints. The details of configuration is shown in Easy4B2b.yaml.
 4. We provided an example of visualizing the solution log file. Run all the blocks of nav_result.ipynb, you can get figures about the PPP-B2b convergence curve, receiver clock bias, STEC scatter and the residuls scatter plot.
 
+## Downloading and preperations
+1. Download the **zip pakeage directly** or using git clone by running the following commend:
+```bash
+git clone https://github.com/alxanderjiang/Easy4PTK.git
+```
+2. Download the "data.zip" and "nav_result.zip" files from Google Drive ([[https://drive.google.com/drive/folders/1jiUGXHMB1W6iSe09Hc1iVTmT-9wfPqOy?usp=drive_link]](https://drive.google.com/drive/folders/1jiUGXHMB1W6iSe09Hc1iVTmT-9wfPqOy?usp=drive_link))) or LanZou Drive ([[https://wwbwg.lanzouv.com/b01bjc4y2f]](https://wwbwg.lanzouv.com/b01bjc4y2f)) . 
+3. Unzip the sample data folders: data.zip and nav_result.zip to the same path of Easy4PTK. If linux but no GUI, please run the following commends:
+
+```bash
+cd Easy4PTK
+unzip data.zip
+unzip nav_result
+```
+4. Ensure that the numpy, tqdm, ipykernel, numba and Pyyaml is available in your Python environment. If not, please run the following commends to install:
+
+```bash
+pip install numpy
+pip install tqdm
+pip install ipykernel
+pip install numba
+pip install Pyyaml
+```
+
+  numpy and tqdm is used in the core codes while ipykernel is necessary to run Jupyter Notebook tutorials. numba is used to accelerate the computation (this can be ignored by change all the "numba_inv" function to simple "inv()" function). Unlike the Easy4PPP, Easy4PTK does not support running from a __main__ function with variables definition, only Yaml Configuration file is supported.
+Some problems may happen when install or use numba because of laking the library scipy, please install it by running the following commends:
+
+```bash
+pip install scipy
+
 
