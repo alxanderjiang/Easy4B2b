@@ -1,0 +1,94 @@
+## Easy4B2b配置文件
+## Easy4B2b: 纯Python编译的PPP-B2b-RTK工具箱
+## Configure File of Easy4PPP: An Easily Applied and Recompiled Multi-platform 
+## BDS-B2b Precise Point Positioning Real-Time Kinematic Toolbox Coded in Python
+
+## 作者: 蒋卓君, 杨泽恩, 黄文静, 钱闯, 武汉理工大学
+## Copyright 2025-, by Zhuojun Jiang, Zeen Yang, Wenjing Huang, Chuang Qian, Wuhan University of Technology, China
+
+## 数据流(文件)
+## observation file path
+obs_stream: "data/Real_Time/pimo0790.24o.b2b.log"
+
+## 多系统频率 (B2b模式下该配置暂时不能更改)
+## Multi-GNSS Code&Frequency Choices (RINEX version 3.04 format)
+
+freqs: [
+        [1575.42E+6, 1227.60E+6],
+        [1561.098E+6,1268.52E+6],
+        #[1575.42E+6, 1176.45E+6]
+        ]
+
+
+# 精密产品后处理模式配置
+# 精密产品文件路径
+# Precise Products Path
+SP3_file: "wum240318.sp3"               
+CLK_file: "wum240318.clk"                
+ATX_file: "data/ATX/igs20.atx"   
+
+## 导航结果输出文件路径
+## Navigation Results Path
+out_path: "nav_result"    
+
+# 解算时间段
+# The solution time period 
+obs_start_time: [2024,3,19,0,0,0.0]                          #解算初始时刻(the beginning time of solution)
+obs_end_time:   [2024,3,20,0,0,0.0]                          #解算结束时刻(the ending time of solution)
+
+# 最大容忍失锁阈值时间 (单位: s, 用于电离层、模糊度状态重置)
+# The outlier ages of ionospheric delay and ambiguity, expressed in second.
+out_age: 31                                     
+
+# PPP动态模式配置, 支持static, dynamic
+# Dynamic mode, 'static' or 'dynamic'
+dy_mode: 'static'                                
+
+# 卫星截止高度角
+# The threshold of satellite elevation
+el_threthod: 10.0                                
+
+# 先验残差阈值 (单位: m)
+# The threshold of pre-fit residuals, expressed in meters
+ex_threshold_v: 30                               
+
+# 后验残差阈值
+# The threshold of post-fit residuals, expressed as the multiples of noise residuals (sigma)
+ex_threshold_v_sigma: 4
+
+# Mw组合周跳检验阈值 (单位: 周)
+# The threshold of phase jump detation for Mw combinations, expressed in cycle
+Mw_threshold: 2.5                                
+
+# GF组合周跳检验阈值 (单位: m)
+# The threshold of phase jump detation for Mw combinations, expressed in meters
+GF_threshold: 0.15                               
+
+# 排除卫星PRN码 (不包括因精密星历和钟差基准而排除的卫星)
+# The PRNs of outiler satellites                                
+sat_out: ['C01','C02','C03','C04','C05','C06','C07','C08',
+  'C09','C10','C11','C12','C13','C14','C15','C16','C17','C18']
+# sat_out: ['G01','G02','G03','G04','G05','G06','G07','G08',
+#   'G09','G10','G11','G12','G13','G14','G15','G16','G17','G18','G19',
+#   'G20','G21','G22','G23','G24','G25','G26','G27','G28','G29','G30',
+#   'G31','G32']
+
+# IGSO/GEO星座可用性设置
+# Outlier the IGSO/GEO or not
+MEO_only: 0
+      
+# PPP-B2b-RTK配置
+sta_mode: None                 #支持None(PPP-B2b)/Base(基准站)/Rove(PPP-B2b-RTK流动站)/IGSR(事后IGS精密产品)
+reinitial_sec: 0               #重收敛时间
+
+#基准站坐标约束
+STA_P: [4846664.898933196, -370194.9113290281, 4116929.8071894697]
+STA_Q: [0.0001, 0.0001, 0.0001]
+
+#流动站SSR改正信息配置
+rtk_info_mat : 'data/rtk_info/wuh20790.24o.b2b.log.out.npy'
+t_interval: 30                 #PPP-B2b-RTK SSR更新频度(单位:s)
+Qi_init: 5.0                   #初始化质量衰减因子(初始化外加质量松弛因子, 单位:TECU)
+Qi_scale: 1.0                  #基线质量衰减因子(地理坐标每度衰减, 单位:m, 若为-1, 则不对电离层进行约束)
+Qi_ele_threshold: 10           #电离层SSR应用最小高度角(单位:deg)
+Qt_scale: -1                   #基线对流层质量衰减因子(每单位基线长度衰减, 单位:m, 若为-1, 则不对对流层进行约束)
