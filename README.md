@@ -47,6 +47,6 @@ pip install scipy
 
 
 
-##
+## Real-Time Mode: Real-Time PPP-B2b by the datastream transferred by UART
 
 
