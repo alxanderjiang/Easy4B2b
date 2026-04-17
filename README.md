@@ -125,5 +125,7 @@ The virtual serial port tool can be downloaded from the **Virtual Serial Port Dr
 Easy4B2b real-time stream mainly depends on the [[Unicore NebulasIV Products Commands and Logs Reference Book]](https://www.unicorecomm.com/download) because of the avaliable PPP-B2b messages output. Since users may not have the hardware to receive PPP-B2b messages, here are some open source data links :
 1. NavDecoder by NavSesne [[https://github.com/NavSesne/NavDecoder?tab=readme-ov-file]](https://github.com/NavSesne/NavDecoder?tab=readme-ov-file)
 2. BDSMART of CAS [[https://data.bdsmart.cn/pub/campaign/gnss/hascorrection/PPP_B2b_File/]](https://data.bdsmart.cn/pub/campaign/gnss/hascorrection/PPP_B2b_File/)
-3. to be updated...
+3. To be updated...
 
+## Contact Authors
+All the libaries and softwares in this toolbox are coded by Zhuojun Jiang, Zeen Yang, Wenjing Huang, Chuang Qian from Wuhan University of Technology. Any commends or bug reports are welcomed by sending email to its0122112380219@163.com.
