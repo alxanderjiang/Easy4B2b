@@ -111,3 +111,9 @@ B2b_log_path='data/Logs/20240319_B2b-PPP.25b.txt'   #B2b原始消息 The path of
 out_path='data/Real_Time/'                          #仿真数据流文件输出路径  The output path of simulated real-time log files
 main_path='data/OBS/'                               #观测数据文件夹路径 The path of observation files
 ```
+Run the src/fast_simulation.py, Easy4B2b will automatically simulate the real-time stream file of all the observation files in main_path. Specific to the example we give, after running src/fast_simulation.py, 'jfng0790.24o.b2b.log', 'wuh20790.24o.b2b.log', 'pimo0790.24o.b2b.log' will be generated under the data/Real-Time path. In addition, the main function of src/ppp_b2b.py is also used to generate a single simulation file, and the configuration is the same as above descriptions. 
+
+## Using Virtual Serial Port to Test Real-Time PPP-B2b solution
+
+Due to the limitation of hardware or test conditions, some users do not have UM982 hardware or field GNSS test conditions. Easy4B2b provides a simulation real-time stream test script src/vitual_serial_sim.py based on virtual serial port technology. Using the virtual serial port tool to establish two interconnected virtual serial ports (such as 'COM21' and 'COM20' ) on Windows PC. Make sure that src/ppp_b2b_ realtime.py and src/vitual_serial_sim.py are connected to the above two virtual serial ports respectively, and the real-time PPP-B2b test can be started by using the existing real-time data file.
+The virtual serial port tool can be downloaded from the [[**Virtual Serial Port Driver**]](The virtual serial port tool can be downloaded from the VSPD official website.) website.
