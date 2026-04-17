@@ -97,6 +97,6 @@ PRE_RES_THR=200             #先验残差排除阈值(m)  / pre outlier of resid
 POST_RES_THR=4              #后验残差排除阈值(无单位, 倍数) / post outlier of resoduals (unit)
 ```
 The rest of the configuration is set inside the __main__ function. Easy4B2b real-time mode saves real-time stream data to the file by default. The default save path is as follows:
-```python
+```Python
     file_out="./data/Logs/PPP_B2b_MSG.log"
 ```
