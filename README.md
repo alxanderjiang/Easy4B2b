@@ -116,4 +116,5 @@ Run the src/fast_simulation.py, Easy4B2b will automatically simulate the real-ti
 ## Using Virtual Serial Port to Test Real-Time PPP-B2b solution
 
 Due to the limitation of hardware or test conditions, some users do not have UM982 hardware or field GNSS test conditions. Easy4B2b provides a simulation real-time stream test script src/vitual_serial_sim.py based on virtual serial port technology. Using the virtual serial port tool to establish two interconnected virtual serial ports (such as 'COM21' and 'COM20' ) on Windows PC. Make sure that src/ppp_b2b_ realtime.py and src/vitual_serial_sim.py are connected to the above two virtual serial ports respectively, and the real-time PPP-B2b test can be started by using the existing real-time data file.
+
 The virtual serial port tool can be downloaded from the **Virtual Serial Port Driver**(VSPD) website [[https://www.virtual-serial-port.org/user-guides/standard/installation.html]](https://www.virtual-serial-port.org/user-guides/standard/installation.html).
