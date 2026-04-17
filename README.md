@@ -120,3 +120,10 @@ Due to the limitation of hardware or test conditions, some users do not have UM9
 The virtual serial port tool can be downloaded from the **Virtual Serial Port Driver**(VSPD) website [[https://www.virtual-serial-port.org/user-guides/standard/installation.html]](https://www.virtual-serial-port.org/user-guides/standard/installation.html). If you do not want to use VSPD tools, real-time PPP-B2b test can also be achieved by connecting two computers to each other by serial ports. The following figure shows the flow diagram of the virtual serial port for real-time PPP-B2b test:
 
 <img src=./image/virtual-serial.png>
+
+## About the PPP-B2b Raw Message Log Files
+Easy4B2b real-time stream mainly depends on the [[Unicore NebulasIV Products Commands and Logs Reference Book]](https://www.unicorecomm.com/download) because of the avaliable PPP-B2b messages output. Since users may not have the hardware to receive PPP-B2b messages, here are some open source data links :
+1. NavDecoder by NavSesne [[https://github.com/NavSesne/NavDecoder?tab=readme-ov-file]](https://github.com/NavSesne/NavDecoder?tab=readme-ov-file)
+2. BDSMART of CAS [[https://data.bdsmart.cn/pub/campaign/gnss/hascorrection/PPP_B2b_File/]](https://data.bdsmart.cn/pub/campaign/gnss/hascorrection/PPP_B2b_File/)
+3. to be updated...
+
