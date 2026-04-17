@@ -119,4 +119,4 @@ Due to the limitation of hardware or test conditions, some users do not have UM9
 
 The virtual serial port tool can be downloaded from the **Virtual Serial Port Driver**(VSPD) website [[https://www.virtual-serial-port.org/user-guides/standard/installation.html]](https://www.virtual-serial-port.org/user-guides/standard/installation.html). If you do not want to use VSPD tools, real-time PPP-B2b test can also be achieved by connecting two computers to each other by serial ports. The following figure shows the flow diagram of the virtual serial port for real-time PPP-B2b test:
 
-<img src=./images/WAB2-ZIM2.png>
+<img src=./image/virtual-serial.png>
