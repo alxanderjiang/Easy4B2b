@@ -100,3 +100,14 @@ The rest of the configuration is set inside the __main__ function. Easy4B2b real
 ```Python
     file_out="./data/Logs/PPP_B2b_MSG.log"
 ```
+
+## Rasl-Time log files Simulation: Simulat the Real-Time Stream using .o, BRD4 and PPP-B2b Message
+
+Easy4B2b provides a script 'src/fast_simulation.py' based on RINEX V3 version of the original observation file (.o), RINEX V4 version of the BRD4 ephemeris file and PPP-B2b raw messages collected by UM982 for fast parallel simulation. Set all the paths of above mentioned input files:
+
+```Python
+brd4_path='data/BRD4/brd40790.24p'                  #BRD4星历文件路径 The path of BRD4 ephemeris files include CNAV-1
+B2b_log_path='data/Logs/20240319_B2b-PPP.25b.txt'   #B2b原始消息 The path of original PPP-B2b messages collected from UM982
+out_path='data/Real_Time/'                          #仿真数据流文件输出路径  The output path of simulated real-time log files
+main_path='data/OBS/'                               #观测数据文件夹路径 The path of observation files
+```
