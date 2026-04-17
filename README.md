@@ -81,3 +81,11 @@ sta_mode: None                     #支持None(PPP-B2b)/Base(基准站, PPP-B2b-
 ## Real-Time Mode: Real-Time PPP-B2b by the datastream received from UART COM Port
 Easy4B2b supports UART/USART serial data stream real-time PPP-B2b solution in Real-Time Mode. Real-time mode depends on the __main__ function of src/ppp_b2b_realtime.py. Connect the GNSS receiver (UM982 or other Unicore devices support PPP-B2b) to the Easy4B2b operating device (PC or Edge Python device) via a serial port and run src/ppp_b2b_realtime.py, Easy4B2b will automatically complete the receiver configuration command transmission, real-time ASCII message reception, real-time message decoding, real-time PPP-B2b solving and data stream storage. 
 
+In src/ppp_b2b_realtime.py, the macro definitions related to serial communication should be set as follows:
+```yaml
+COM_PORT='COM8'             #上位机(PC)的串口号 (The serial port of the host computer (PC or edge Python devices).)
+DEVICE_COM_PORT=''          #与上位机连接的UM982的输出串口号, 根据用户电路设计自行调整(The output serial port number of UM982 connected to the host computer recommended to be set to **''** to ensure the normal output of the serial port)
+BAUT_RATE=115200            #波特率 (Baut rate of serial port)
+BUFF_SIZE=8192              #建议设置为4096以上, 以承接原始观测值消息 (The buffer size of serial port, recommended to be set over 4096 to ensure that OBSVMA can be received)
+```
+
