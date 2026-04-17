@@ -79,5 +79,5 @@ sta_mode: None                     #支持None(PPP-B2b)/Base(基准站, PPP-B2b-
 ```
 
 ## Real-Time Mode: Real-Time PPP-B2b by the datastream received from UART COM Port
-
+Easy4B2b supports UART/USART serial data stream real-time PPP-B2b solution in Real-Time Mode. Real-time mode depends on the __main__ function of src/ppp_b2b_realtime.py. Connect the GNSS receiver (UM982 or other Unicore devices support PPP-B2b) to the Easy4B2b operating device (PC or Edge Python device) via a serial port and run src/ppp_b2b_realtime.py, Easy4B2b will automatically complete the receiver configuration command transmission, real-time ASCII message reception, real-time message decoding, real-time PPP-B2b solving and data stream storage. 
 
